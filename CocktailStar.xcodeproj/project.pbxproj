@@ -51,9 +51,12 @@
 		11A7B8632B0E422E00AEB14D /* CocktailStar */ = {
 			isa = PBXGroup;
 			children = (
+				11A7B87A2B0E429E00AEB14D /* Core */,
+				11A7B8792B0E429100AEB14D /* Features */,
+				11A7B8732B0E423D00AEB14D /* Common */,
 				11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */,
 				11A7B8662B0E422E00AEB14D /* ContentView.swift */,
-				11A7B8682B0E422F00AEB14D /* Assets.xcassets */,
+				11A7B8742B0E424400AEB14D /* Resources */,
 				11A7B86A2B0E422F00AEB14D /* Preview Content */,
 			);
 			path = CocktailStar;
@@ -65,6 +68,75 @@
 				11A7B86B2B0E422F00AEB14D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11A7B8732B0E423D00AEB14D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				11A7B8782B0E427600AEB14D /* Utils */,
+				11A7B8772B0E426E00AEB14D /* Managers */,
+				11A7B8762B0E426000AEB14D /* Network */,
+				11A7B8752B0E425700AEB14D /* Services */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		11A7B8742B0E424400AEB14D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11A7B8682B0E422F00AEB14D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		11A7B8752B0E425700AEB14D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		11A7B8762B0E426000AEB14D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		11A7B8772B0E426E00AEB14D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		11A7B8782B0E427600AEB14D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		11A7B8792B0E429100AEB14D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		11A7B87A2B0E429E00AEB14D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				11A7B87B2B0E42A500AEB14D /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		11A7B87B2B0E42A500AEB14D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
