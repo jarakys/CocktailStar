@@ -6,9 +6,15 @@
 //
 
 import SwiftUI
+import NeedleFoundation
 
 @main
 struct CocktailStarApp: App {
+    
+    init() {
+        registerProviderFactories()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

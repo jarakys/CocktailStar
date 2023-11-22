@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1137D85A2B0E4D09001A48A1 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1137D8592B0E4D09001A48A1 /* NeedleGenerated.swift */; };
 		11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */; };
 		11A7B8672B0E422E00AEB14D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8662B0E422E00AEB14D /* ContentView.swift */; };
 		11A7B8692B0E422F00AEB14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A7B8682B0E422F00AEB14D /* Assets.xcassets */; };
 		11A7B86C2B0E422F00AEB14D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A7B86B2B0E422F00AEB14D /* Preview Assets.xcassets */; };
+		11A7B87E2B0E43C600AEB14D /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 11A7B87D2B0E43C600AEB14D /* RswiftLibrary */; };
+		11A7B8802B0E43C600AEB14D /* rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 11A7B87F2B0E43C600AEB14D /* rswift */; };
+		11A7B8832B0E449D00AEB14D /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 11A7B8822B0E449D00AEB14D /* NeedleFoundation */; };
+		11A7B8852B0E449D00AEB14D /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = 11A7B8842B0E449D00AEB14D /* NeedleFoundationTest */; };
+		11A7B88C2B0E483700AEB14D /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B88B2B0E483700AEB14D /* RootComponent.swift */; };
+		11A7B8912B0E48E900AEB14D /* needle.sh in Resources */ = {isa = PBXBuildFile; fileRef = 11A7B88F2B0E48E900AEB14D /* needle.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1137D8592B0E4D09001A48A1 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 		11A7B8612B0E422D00AEB14D /* CocktailStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailStarApp.swift; sourceTree = "<group>"; };
 		11A7B8662B0E422E00AEB14D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11A7B8682B0E422F00AEB14D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A7B86B2B0E422F00AEB14D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11A7B88B2B0E483700AEB14D /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
+		11A7B88F2B0E48E900AEB14D /* needle.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = needle.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +36,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A7B8852B0E449D00AEB14D /* NeedleFoundationTest in Frameworks */,
+				11A7B87E2B0E43C600AEB14D /* RswiftLibrary in Frameworks */,
+				11A7B8832B0E449D00AEB14D /* NeedleFoundation in Frameworks */,
+				11A7B8802B0E43C600AEB14D /* rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +65,7 @@
 		11A7B8632B0E422E00AEB14D /* CocktailStar */ = {
 			isa = PBXGroup;
 			children = (
+				11A7B88D2B0E48E900AEB14D /* Scripts */,
 				11A7B87A2B0E429E00AEB14D /* Core */,
 				11A7B8792B0E429100AEB14D /* Features */,
 				11A7B8732B0E423D00AEB14D /* Common */,
@@ -73,6 +88,7 @@
 		11A7B8732B0E423D00AEB14D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				11A7B8872B0E44E400AEB14D /* Generated */,
 				11A7B8782B0E427600AEB14D /* Utils */,
 				11A7B8772B0E426E00AEB14D /* Managers */,
 				11A7B8762B0E426000AEB14D /* Network */,
@@ -128,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				11A7B87B2B0E42A500AEB14D /* Extensions */,
+				11A7B88B2B0E483700AEB14D /* RootComponent.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -139,6 +156,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		11A7B8872B0E44E400AEB14D /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				1137D8592B0E4D09001A48A1 /* NeedleGenerated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		11A7B88D2B0E48E900AEB14D /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				11A7B88F2B0E48E900AEB14D /* needle.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11A7B86F2B0E422F00AEB14D /* Build configuration list for PBXNativeTarget "CocktailStar" */;
 			buildPhases = (
+				11A7B8862B0E44C300AEB14D /* Needle generate */,
 				11A7B85D2B0E422D00AEB14D /* Sources */,
 				11A7B85E2B0E422D00AEB14D /* Frameworks */,
 				11A7B85F2B0E422D00AEB14D /* Resources */,
@@ -155,6 +189,12 @@
 			dependencies = (
 			);
 			name = CocktailStar;
+			packageProductDependencies = (
+				11A7B87D2B0E43C600AEB14D /* RswiftLibrary */,
+				11A7B87F2B0E43C600AEB14D /* rswift */,
+				11A7B8822B0E449D00AEB14D /* NeedleFoundation */,
+				11A7B8842B0E449D00AEB14D /* NeedleFoundationTest */,
+			);
 			productName = CocktailStar;
 			productReference = 11A7B8612B0E422D00AEB14D /* CocktailStar.app */;
 			productType = "com.apple.product-type.application";
@@ -183,6 +223,10 @@
 				Base,
 			);
 			mainGroup = 11A7B8582B0E422D00AEB14D;
+			packageReferences = (
+				11A7B87C2B0E43C500AEB14D /* XCRemoteSwiftPackageReference "R.swift" */,
+				11A7B8812B0E449D00AEB14D /* XCRemoteSwiftPackageReference "needle" */,
+			);
 			productRefGroup = 11A7B8622B0E422D00AEB14D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -199,17 +243,42 @@
 			files = (
 				11A7B86C2B0E422F00AEB14D /* Preview Assets.xcassets in Resources */,
 				11A7B8692B0E422F00AEB14D /* Assets.xcassets in Resources */,
+				11A7B8912B0E48E900AEB14D /* needle.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11A7B8862B0E44C300AEB14D /* Needle generate */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Needle generate";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/CocktailStar/Scripts/needle.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11A7B85D2B0E422D00AEB14D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1137D85A2B0E4D09001A48A1 /* NeedleGenerated.swift in Sources */,
 				11A7B8672B0E422E00AEB14D /* ContentView.swift in Sources */,
+				11A7B88C2B0E483700AEB14D /* RootComponent.swift in Sources */,
 				11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +323,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -317,7 +386,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -416,6 +485,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11A7B87C2B0E43C500AEB14D /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.4.0;
+			};
+		};
+		11A7B8812B0E449D00AEB14D /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11A7B87D2B0E43C600AEB14D /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11A7B87C2B0E43C500AEB14D /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		11A7B87F2B0E43C600AEB14D /* rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11A7B87C2B0E43C500AEB14D /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = rswift;
+		};
+		11A7B8822B0E449D00AEB14D /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11A7B8812B0E449D00AEB14D /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
+		};
+		11A7B8842B0E449D00AEB14D /* NeedleFoundationTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11A7B8812B0E449D00AEB14D /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundationTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11A7B8592B0E422D00AEB14D /* Project object */;
 }
