@@ -16,6 +16,11 @@
 		11630FBE2B10B7750002D647 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 11630FBD2B10B7750002D647 /* ApolloTestSupport */; };
 		11630FC02B10B7750002D647 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 11630FBF2B10B7750002D647 /* ApolloWebSocket */; };
 		11630FC32B10BAAD0002D647 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 11630FC22B10BAAD0002D647 /* Lottie */; };
+		11630FC72B10BC5E0002D647 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 11630FC62B10BC5E0002D647 /* Localizable.xcstrings */; };
+		11630FCE2B10C60C0002D647 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FCD2B10C60C0002D647 /* HomeView.swift */; };
+		11630FD12B10DA1F0002D647 /* OfferHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD02B10DA1F0002D647 /* OfferHomeCell.swift */; };
+		11630FD42B10DA4D0002D647 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD32B10DA4D0002D647 /* BlurView.swift */; };
+		11630FD72B10DA790002D647 /* FollowFingerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD62B10DA790002D647 /* FollowFingerModifier.swift */; };
 		11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */; };
 		11A7B8672B0E422E00AEB14D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8662B0E422E00AEB14D /* ContentView.swift */; };
 		11A7B8692B0E422F00AEB14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A7B8682B0E422F00AEB14D /* Assets.xcassets */; };
@@ -30,6 +35,11 @@
 
 /* Begin PBXFileReference section */
 		1137D8592B0E4D09001A48A1 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		11630FC62B10BC5E0002D647 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		11630FCD2B10C60C0002D647 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		11630FD02B10DA1F0002D647 /* OfferHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferHomeCell.swift; sourceTree = "<group>"; };
+		11630FD32B10DA4D0002D647 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		11630FD62B10DA790002D647 /* FollowFingerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowFingerModifier.swift; sourceTree = "<group>"; };
 		11A7B8612B0E422D00AEB14D /* CocktailStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailStarApp.swift; sourceTree = "<group>"; };
 		11A7B8662B0E422E00AEB14D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +72,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11630FC42B10BB170002D647 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		11630FC52B10BB240002D647 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		11630FC82B10C17E0002D647 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				11630FCF2B10DA160002D647 /* Cells */,
+				11630FCD2B10C60C0002D647 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		11630FC92B10C1840002D647 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		11630FCA2B10C1AD0002D647 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		11630FCB2B10C1B60002D647 /* AllCocktails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AllCocktails;
+			sourceTree = "<group>";
+		};
+		11630FCF2B10DA160002D647 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				11630FD02B10DA1F0002D647 /* OfferHomeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		11630FD22B10DA460002D647 /* UISystem */ = {
+			isa = PBXGroup;
+			children = (
+				11630FD52B10DA690002D647 /* Modifiers */,
+				11630FD32B10DA4D0002D647 /* BlurView.swift */,
+			);
+			path = UISystem;
+			sourceTree = "<group>";
+		};
+		11630FD52B10DA690002D647 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				11630FD62B10DA790002D647 /* FollowFingerModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		11A7B8582B0E422D00AEB14D = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +183,7 @@
 		11A7B8732B0E423D00AEB14D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				11630FD22B10DA460002D647 /* UISystem */,
 				11A7B8872B0E44E400AEB14D /* Generated */,
 				11A7B8782B0E427600AEB14D /* Utils */,
 				11A7B8772B0E426E00AEB14D /* Managers */,
@@ -117,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				11A7B8682B0E422F00AEB14D /* Assets.xcassets */,
+				11630FC62B10BC5E0002D647 /* Localizable.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -124,6 +205,8 @@
 		11A7B8752B0E425700AEB14D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				11630FC52B10BB240002D647 /* Keychain */,
+				11630FC42B10BB170002D647 /* UserDefaults */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -152,6 +235,10 @@
 		11A7B8792B0E429100AEB14D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				11630FCB2B10C1B60002D647 /* AllCocktails */,
+				11630FCA2B10C1AD0002D647 /* Profile */,
+				11630FC92B10C1840002D647 /* Favorites */,
+				11630FC82B10C17E0002D647 /* Home */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -270,6 +357,7 @@
 			files = (
 				11A7B86C2B0E422F00AEB14D /* Preview Assets.xcassets in Resources */,
 				11A7B8692B0E422F00AEB14D /* Assets.xcassets in Resources */,
+				11630FC72B10BC5E0002D647 /* Localizable.xcstrings in Resources */,
 				11A7B8912B0E48E900AEB14D /* needle.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,8 +392,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1137D85A2B0E4D09001A48A1 /* NeedleGenerated.swift in Sources */,
+				11630FD42B10DA4D0002D647 /* BlurView.swift in Sources */,
+				11630FD72B10DA790002D647 /* FollowFingerModifier.swift in Sources */,
+				11630FD12B10DA1F0002D647 /* OfferHomeCell.swift in Sources */,
 				11A7B8672B0E422E00AEB14D /* ContentView.swift in Sources */,
 				11A7B88C2B0E483700AEB14D /* RootComponent.swift in Sources */,
+				11630FCE2B10C60C0002D647 /* HomeView.swift in Sources */,
 				11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
