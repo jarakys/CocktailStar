@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "compositionallist",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jamesrochabrun/CompositionalList.git",
+      "state" : {
+        "revision" : "01755c5f5a2f4d1af430d09e81a9175f4cefdedd",
+        "version" : "1.0.5"
+      }
+    },
+    {
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher.git",
@@ -37,39 +46,12 @@
       }
     },
     {
-      "identity" : "r.swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mac-cain13/R.swift.git",
-      "state" : {
-        "revision" : "a76220f2c4b73bdda670f4a318c6ec983399ac6d",
-        "version" : "7.4.0"
-      }
-    },
-    {
       "identity" : "sqlite.swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/stephencelis/SQLite.swift.git",
       "state" : {
         "revision" : "7a2e3cd27de56f6d396e84f63beefd0267b55ccb",
         "version" : "0.14.1"
-      }
-    },
-    {
-      "identity" : "swift-argument-parser",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-argument-parser",
-      "state" : {
-        "revision" : "8f4d2753f0e4778c76d5f05ad16c74f707390531",
-        "version" : "1.2.3"
-      }
-    },
-    {
-      "identity" : "xcodeedit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/tomlokhorst/XcodeEdit",
-      "state" : {
-        "revision" : "b6b67389a0f1a6fdd9c6457a8ab5b02eaab13c5c",
-        "version" : "2.9.2"
       }
     }
   ],

@@ -21,12 +21,11 @@
 		11630FD12B10DA1F0002D647 /* OfferHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD02B10DA1F0002D647 /* OfferHomeCell.swift */; };
 		11630FD42B10DA4D0002D647 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD32B10DA4D0002D647 /* BlurView.swift */; };
 		11630FD72B10DA790002D647 /* FollowFingerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD62B10DA790002D647 /* FollowFingerModifier.swift */; };
+		11630FDB2B10E3850002D647 /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 11630FDA2B10E3850002D647 /* CompositionalList */; };
 		11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */; };
 		11A7B8672B0E422E00AEB14D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8662B0E422E00AEB14D /* ContentView.swift */; };
 		11A7B8692B0E422F00AEB14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A7B8682B0E422F00AEB14D /* Assets.xcassets */; };
 		11A7B86C2B0E422F00AEB14D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A7B86B2B0E422F00AEB14D /* Preview Assets.xcassets */; };
-		11A7B87E2B0E43C600AEB14D /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 11A7B87D2B0E43C600AEB14D /* RswiftLibrary */; };
-		11A7B8802B0E43C600AEB14D /* rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 11A7B87F2B0E43C600AEB14D /* rswift */; };
 		11A7B8832B0E449D00AEB14D /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 11A7B8822B0E449D00AEB14D /* NeedleFoundation */; };
 		11A7B8852B0E449D00AEB14D /* NeedleFoundationTest in Frameworks */ = {isa = PBXBuildFile; productRef = 11A7B8842B0E449D00AEB14D /* NeedleFoundationTest */; };
 		11A7B88C2B0E483700AEB14D /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B88B2B0E483700AEB14D /* RootComponent.swift */; };
@@ -59,11 +58,10 @@
 				11630FBE2B10B7750002D647 /* ApolloTestSupport in Frameworks */,
 				11A7B8852B0E449D00AEB14D /* NeedleFoundationTest in Frameworks */,
 				11630FBC2B10B7750002D647 /* ApolloSQLite in Frameworks */,
+				11630FDB2B10E3850002D647 /* CompositionalList in Frameworks */,
 				11630FBA2B10B7750002D647 /* ApolloAPI in Frameworks */,
 				11630FB62B10B7750002D647 /* Apollo in Frameworks */,
-				11A7B87E2B0E43C600AEB14D /* RswiftLibrary in Frameworks */,
 				11A7B8832B0E449D00AEB14D /* NeedleFoundation in Frameworks */,
-				11A7B8802B0E43C600AEB14D /* rswift in Frameworks */,
 				1137D85D2B0E50C1001A48A1 /* Kingfisher in Frameworks */,
 				11630FC32B10BAAD0002D647 /* Lottie in Frameworks */,
 			);
@@ -293,8 +291,6 @@
 			);
 			name = CocktailStar;
 			packageProductDependencies = (
-				11A7B87D2B0E43C600AEB14D /* RswiftLibrary */,
-				11A7B87F2B0E43C600AEB14D /* rswift */,
 				11A7B8822B0E449D00AEB14D /* NeedleFoundation */,
 				11A7B8842B0E449D00AEB14D /* NeedleFoundationTest */,
 				1137D85C2B0E50C1001A48A1 /* Kingfisher */,
@@ -305,6 +301,7 @@
 				11630FBD2B10B7750002D647 /* ApolloTestSupport */,
 				11630FBF2B10B7750002D647 /* ApolloWebSocket */,
 				11630FC22B10BAAD0002D647 /* Lottie */,
+				11630FDA2B10E3850002D647 /* CompositionalList */,
 			);
 			productName = CocktailStar;
 			productReference = 11A7B8612B0E422D00AEB14D /* CocktailStar.app */;
@@ -335,11 +332,11 @@
 			);
 			mainGroup = 11A7B8582B0E422D00AEB14D;
 			packageReferences = (
-				11A7B87C2B0E43C500AEB14D /* XCRemoteSwiftPackageReference "R.swift" */,
 				11A7B8812B0E449D00AEB14D /* XCRemoteSwiftPackageReference "needle" */,
 				1137D85B2B0E50C1001A48A1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				11630FB42B10B7750002D647 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				11630FC12B10BAAD0002D647 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				11630FD92B10E3850002D647 /* XCRemoteSwiftPackageReference "CompositionalList" */,
 			);
 			productRefGroup = 11A7B8622B0E422D00AEB14D /* Products */;
 			projectDirPath = "";
@@ -630,12 +627,12 @@
 				minimumVersion = 4.3.3;
 			};
 		};
-		11A7B87C2B0E43C500AEB14D /* XCRemoteSwiftPackageReference "R.swift" */ = {
+		11630FD92B10E3850002D647 /* XCRemoteSwiftPackageReference "CompositionalList" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			repositoryURL = "https://github.com/jamesrochabrun/CompositionalList.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 7.4.0;
+				minimumVersion = 1.0.5;
 			};
 		};
 		11A7B8812B0E449D00AEB14D /* XCRemoteSwiftPackageReference "needle" */ = {
@@ -689,15 +686,10 @@
 			package = 11630FC12B10BAAD0002D647 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		11A7B87D2B0E43C600AEB14D /* RswiftLibrary */ = {
+		11630FDA2B10E3850002D647 /* CompositionalList */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 11A7B87C2B0E43C500AEB14D /* XCRemoteSwiftPackageReference "R.swift" */;
-			productName = RswiftLibrary;
-		};
-		11A7B87F2B0E43C600AEB14D /* rswift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11A7B87C2B0E43C500AEB14D /* XCRemoteSwiftPackageReference "R.swift" */;
-			productName = rswift;
+			package = 11630FD92B10E3850002D647 /* XCRemoteSwiftPackageReference "CompositionalList" */;
+			productName = CompositionalList;
 		};
 		11A7B8822B0E449D00AEB14D /* NeedleFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
