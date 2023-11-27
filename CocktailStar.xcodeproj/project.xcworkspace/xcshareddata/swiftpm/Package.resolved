@@ -12,10 +12,9 @@
     {
       "identity" : "compositionallist",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jamesrochabrun/CompositionalList.git",
+      "location" : "https://github.com/jarakys/CompositionalList.git",
       "state" : {
-        "revision" : "01755c5f5a2f4d1af430d09e81a9175f4cefdedd",
-        "version" : "1.0.5"
+        "revision" : "2c5c5bcf809f3ae1c7be1d98e27bf635f696d8ee"
       }
     },
     {

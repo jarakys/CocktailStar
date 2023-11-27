@@ -23,12 +23,13 @@ struct OfferHomeCell: View {
                     )
                 }
             VStack(spacing: 8) {
-                Image("cocktailPlaceholder")
+                Image(.cocktailPlaceholder)
                     .resizable()
                 Text("Editor's Choice")
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color.red)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.all, 10)
+            .padding(.all, 20)
         }
         .overlay(
             RoundedRectangle(cornerRadius: 20)

@@ -21,7 +21,12 @@
 		11630FD12B10DA1F0002D647 /* OfferHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD02B10DA1F0002D647 /* OfferHomeCell.swift */; };
 		11630FD42B10DA4D0002D647 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD32B10DA4D0002D647 /* BlurView.swift */; };
 		11630FD72B10DA790002D647 /* FollowFingerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FD62B10DA790002D647 /* FollowFingerModifier.swift */; };
-		11630FDB2B10E3850002D647 /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 11630FDA2B10E3850002D647 /* CompositionalList */; };
+		11630FDE2B10E59A0002D647 /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FDD2B10E59A0002D647 /* CustomLayout.swift */; };
+		11630FE12B10E5E10002D647 /* ScreenSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11630FE02B10E5E10002D647 /* ScreenSections.swift */; };
+		1189A9882B14B85F0048E5D1 /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 1189A9872B14B85F0048E5D1 /* CompositionalList */; };
+		1189A98B2B14D1430048E5D1 /* BaseHomeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189A98A2B14D1430048E5D1 /* BaseHomeItemViewModel.swift */; };
+		1189A98D2B14D16C0048E5D1 /* HomeItemSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189A98C2B14D16C0048E5D1 /* HomeItemSectionModel.swift */; };
+		1189A98F2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189A98E2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift */; };
 		11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */; };
 		11A7B8672B0E422E00AEB14D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8662B0E422E00AEB14D /* ContentView.swift */; };
 		11A7B8692B0E422F00AEB14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A7B8682B0E422F00AEB14D /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 		11630FD02B10DA1F0002D647 /* OfferHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferHomeCell.swift; sourceTree = "<group>"; };
 		11630FD32B10DA4D0002D647 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		11630FD62B10DA790002D647 /* FollowFingerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowFingerModifier.swift; sourceTree = "<group>"; };
+		11630FDD2B10E59A0002D647 /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		11630FE02B10E5E10002D647 /* ScreenSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSections.swift; sourceTree = "<group>"; };
+		1189A98A2B14D1430048E5D1 /* BaseHomeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHomeItemViewModel.swift; sourceTree = "<group>"; };
+		1189A98C2B14D16C0048E5D1 /* HomeItemSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemSectionModel.swift; sourceTree = "<group>"; };
+		1189A98E2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSectionIdentifierModel.swift; sourceTree = "<group>"; };
 		11A7B8612B0E422D00AEB14D /* CocktailStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailStarApp.swift; sourceTree = "<group>"; };
 		11A7B8662B0E422E00AEB14D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +68,7 @@
 				11630FBE2B10B7750002D647 /* ApolloTestSupport in Frameworks */,
 				11A7B8852B0E449D00AEB14D /* NeedleFoundationTest in Frameworks */,
 				11630FBC2B10B7750002D647 /* ApolloSQLite in Frameworks */,
-				11630FDB2B10E3850002D647 /* CompositionalList in Frameworks */,
+				1189A9882B14B85F0048E5D1 /* CompositionalList in Frameworks */,
 				11630FBA2B10B7750002D647 /* ApolloAPI in Frameworks */,
 				11630FB62B10B7750002D647 /* Apollo in Frameworks */,
 				11A7B8832B0E449D00AEB14D /* NeedleFoundation in Frameworks */,
@@ -87,6 +97,9 @@
 		11630FC82B10C17E0002D647 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1189A9892B14D13B0048E5D1 /* ViewModels */,
+				11630FDF2B10E5CE0002D647 /* Models */,
+				11630FDC2B10E5800002D647 /* Extensions */,
 				11630FCF2B10DA160002D647 /* Cells */,
 				11630FCD2B10C60C0002D647 /* HomeView.swift */,
 			);
@@ -137,6 +150,32 @@
 				11630FD62B10DA790002D647 /* FollowFingerModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		11630FDC2B10E5800002D647 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11630FDD2B10E59A0002D647 /* CustomLayout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11630FDF2B10E5CE0002D647 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11630FE02B10E5E10002D647 /* ScreenSections.swift */,
+				1189A98C2B14D16C0048E5D1 /* HomeItemSectionModel.swift */,
+				1189A98E2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1189A9892B14D13B0048E5D1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1189A98A2B14D1430048E5D1 /* BaseHomeItemViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		11A7B8582B0E422D00AEB14D = {
@@ -301,7 +340,7 @@
 				11630FBD2B10B7750002D647 /* ApolloTestSupport */,
 				11630FBF2B10B7750002D647 /* ApolloWebSocket */,
 				11630FC22B10BAAD0002D647 /* Lottie */,
-				11630FDA2B10E3850002D647 /* CompositionalList */,
+				1189A9872B14B85F0048E5D1 /* CompositionalList */,
 			);
 			productName = CocktailStar;
 			productReference = 11A7B8612B0E422D00AEB14D /* CocktailStar.app */;
@@ -336,7 +375,7 @@
 				1137D85B2B0E50C1001A48A1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				11630FB42B10B7750002D647 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				11630FC12B10BAAD0002D647 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				11630FD92B10E3850002D647 /* XCRemoteSwiftPackageReference "CompositionalList" */,
+				1189A9862B14B85F0048E5D1 /* XCRemoteSwiftPackageReference "CompositionalList" */,
 			);
 			productRefGroup = 11A7B8622B0E422D00AEB14D /* Products */;
 			projectDirPath = "";
@@ -388,14 +427,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11630FDE2B10E59A0002D647 /* CustomLayout.swift in Sources */,
 				1137D85A2B0E4D09001A48A1 /* NeedleGenerated.swift in Sources */,
 				11630FD42B10DA4D0002D647 /* BlurView.swift in Sources */,
 				11630FD72B10DA790002D647 /* FollowFingerModifier.swift in Sources */,
+				1189A98B2B14D1430048E5D1 /* BaseHomeItemViewModel.swift in Sources */,
 				11630FD12B10DA1F0002D647 /* OfferHomeCell.swift in Sources */,
+				11630FE12B10E5E10002D647 /* ScreenSections.swift in Sources */,
+				1189A98D2B14D16C0048E5D1 /* HomeItemSectionModel.swift in Sources */,
 				11A7B8672B0E422E00AEB14D /* ContentView.swift in Sources */,
 				11A7B88C2B0E483700AEB14D /* RootComponent.swift in Sources */,
 				11630FCE2B10C60C0002D647 /* HomeView.swift in Sources */,
 				11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */,
+				1189A98F2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,12 +671,12 @@
 				minimumVersion = 4.3.3;
 			};
 		};
-		11630FD92B10E3850002D647 /* XCRemoteSwiftPackageReference "CompositionalList" */ = {
+		1189A9862B14B85F0048E5D1 /* XCRemoteSwiftPackageReference "CompositionalList" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jamesrochabrun/CompositionalList.git";
+			repositoryURL = "https://github.com/jarakys/CompositionalList.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.5;
+				kind = revision;
+				revision = 2c5c5bcf809f3ae1c7be1d98e27bf635f696d8ee;
 			};
 		};
 		11A7B8812B0E449D00AEB14D /* XCRemoteSwiftPackageReference "needle" */ = {
@@ -686,9 +730,9 @@
 			package = 11630FC12B10BAAD0002D647 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		11630FDA2B10E3850002D647 /* CompositionalList */ = {
+		1189A9872B14B85F0048E5D1 /* CompositionalList */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 11630FD92B10E3850002D647 /* XCRemoteSwiftPackageReference "CompositionalList" */;
+			package = 1189A9862B14B85F0048E5D1 /* XCRemoteSwiftPackageReference "CompositionalList" */;
 			productName = CompositionalList;
 		};
 		11A7B8822B0E449D00AEB14D /* NeedleFoundation */ = {
