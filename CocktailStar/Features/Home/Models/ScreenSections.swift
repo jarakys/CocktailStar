@@ -9,6 +9,7 @@ import Foundation
 
 public enum ScreenSections: CaseIterable {
     case offers
+    case favorites
     case proposals
     case appNews
 }

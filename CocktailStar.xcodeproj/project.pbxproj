@@ -27,6 +27,8 @@
 		1189A98B2B14D1430048E5D1 /* BaseHomeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189A98A2B14D1430048E5D1 /* BaseHomeItemViewModel.swift */; };
 		1189A98D2B14D16C0048E5D1 /* HomeItemSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189A98C2B14D16C0048E5D1 /* HomeItemSectionModel.swift */; };
 		1189A98F2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189A98E2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift */; };
+		1189A9932B14E1CC0048E5D1 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189A9922B14E1CC0048E5D1 /* HomeHeaderView.swift */; };
+		1189A9952B14E23A0048E5D1 /* HomeExpandedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1189A9942B14E23A0048E5D1 /* HomeExpandedHeaderView.swift */; };
 		11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */; };
 		11A7B8672B0E422E00AEB14D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A7B8662B0E422E00AEB14D /* ContentView.swift */; };
 		11A7B8692B0E422F00AEB14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A7B8682B0E422F00AEB14D /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		1189A98A2B14D1430048E5D1 /* BaseHomeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHomeItemViewModel.swift; sourceTree = "<group>"; };
 		1189A98C2B14D16C0048E5D1 /* HomeItemSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemSectionModel.swift; sourceTree = "<group>"; };
 		1189A98E2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSectionIdentifierModel.swift; sourceTree = "<group>"; };
+		1189A9922B14E1CC0048E5D1 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		1189A9942B14E23A0048E5D1 /* HomeExpandedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExpandedHeaderView.swift; sourceTree = "<group>"; };
 		11A7B8612B0E422D00AEB14D /* CocktailStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A7B8642B0E422E00AEB14D /* CocktailStarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailStarApp.swift; sourceTree = "<group>"; };
 		11A7B8662B0E422E00AEB14D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,11 +101,10 @@
 		11630FC82B10C17E0002D647 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1189A9912B14E1BA0048E5D1 /* Views */,
 				1189A9892B14D13B0048E5D1 /* ViewModels */,
 				11630FDF2B10E5CE0002D647 /* Models */,
 				11630FDC2B10E5800002D647 /* Extensions */,
-				11630FCF2B10DA160002D647 /* Cells */,
-				11630FCD2B10C60C0002D647 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -176,6 +179,25 @@
 				1189A98A2B14D1430048E5D1 /* BaseHomeItemViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1189A9902B14E1B20048E5D1 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1189A9922B14E1CC0048E5D1 /* HomeHeaderView.swift */,
+				1189A9942B14E23A0048E5D1 /* HomeExpandedHeaderView.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		1189A9912B14E1BA0048E5D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1189A9902B14E1B20048E5D1 /* Headers */,
+				11630FCF2B10DA160002D647 /* Cells */,
+				11630FCD2B10C60C0002D647 /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		11A7B8582B0E422D00AEB14D = {
@@ -429,6 +451,7 @@
 			files = (
 				11630FDE2B10E59A0002D647 /* CustomLayout.swift in Sources */,
 				1137D85A2B0E4D09001A48A1 /* NeedleGenerated.swift in Sources */,
+				1189A9952B14E23A0048E5D1 /* HomeExpandedHeaderView.swift in Sources */,
 				11630FD42B10DA4D0002D647 /* BlurView.swift in Sources */,
 				11630FD72B10DA790002D647 /* FollowFingerModifier.swift in Sources */,
 				1189A98B2B14D1430048E5D1 /* BaseHomeItemViewModel.swift in Sources */,
@@ -439,6 +462,7 @@
 				11A7B88C2B0E483700AEB14D /* RootComponent.swift in Sources */,
 				11630FCE2B10C60C0002D647 /* HomeView.swift in Sources */,
 				11A7B8652B0E422E00AEB14D /* CocktailStarApp.swift in Sources */,
+				1189A9932B14E1CC0048E5D1 /* HomeHeaderView.swift in Sources */,
 				1189A98F2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
