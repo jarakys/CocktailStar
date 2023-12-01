@@ -13,4 +13,23 @@ public enum ScreenSections: CaseIterable {
     case categories
     case proposals
     case appNews
+    
+    var title: String? {
+        switch self {
+        case .offers:
+            return nil
+            
+        case .favorites:
+            return "Favorites"
+            
+        case .categories:
+            return "Categories"
+            
+        case .proposals:
+            return "Proposals"
+            
+        case .appNews:
+            return nil
+        }
+    }
 }

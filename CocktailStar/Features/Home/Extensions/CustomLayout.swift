@@ -17,7 +17,7 @@ public extension UICollectionViewLayout {
             case .offers:
                 return offerSection()
                 
-            case .favorites:
+            case .favorites, .categories:
                 return titledTopItemsSection()
                 
             default: return offerSection()

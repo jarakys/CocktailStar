@@ -19,10 +19,10 @@ struct HomeView: View {
                     OfferHomeCell(viewModel: viewModel)
                     
                 case .favorite:
-                    CategoryHomeCell(title: "Title")
+                    EmptyView()
                     
-                case .category:
-                    CategoryHomeCell(title: "Title")
+                case let .category(viewModel):
+                    CategoryHomeCell(viewModel: viewModel)
                 }
             }.sectionHeader { sectionIdentifier, kind, indexPath in
                 getView(for: sectionIdentifier.type)
@@ -44,7 +44,7 @@ extension HomeView {
         case .offers:
             return AnyView(EmptyView())
         default: return AnyView(
-            HomeExpandedHeaderView()
+            HomeExpandedHeaderView(title: section.title)
                 .padding(.top, 20)
         )
         }

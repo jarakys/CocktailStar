@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct CategoryHomeCell: View {
-    public let title: String
+    public let viewModel: CategoryHomeItemViewModel
+    
     var body: some View {
         VStack {
-            Text(title)
+            Text(viewModel.title)
                 .foregroundStyle(.white)
                 .fontWeight(.bold)
                 .font(.title)
+                .multilineTextAlignment(.center)
         }
-        .background(.regularMaterial)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.green)
     }
 }
 
 #Preview {
-    CategoryHomeCell(title: "Hello")
+    CategoryHomeCell(viewModel: CategoryHomeItemViewModel(title: "Classic cocktails", image: nil))
 }

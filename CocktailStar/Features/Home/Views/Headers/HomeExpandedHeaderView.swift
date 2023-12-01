@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HomeExpandedHeaderView: View {
+    public let title: String?
+    
     var body: some View {
         HStack {
-            Text("Hello, World!")
+            Text(title ?? "")
                 .foregroundColor(.white)
             Spacer()
             Text("Show All")
@@ -20,5 +22,5 @@ struct HomeExpandedHeaderView: View {
 }
 
 #Preview {
-    HomeExpandedHeaderView()
+    HomeExpandedHeaderView(title: "Categories")
 }
