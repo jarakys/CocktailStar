@@ -19,4 +19,8 @@ final class HomeViewModel: BaseViewModel {
         items = Self.mockedItems
         super.init()
     }
+    
+    public func searchDidTap() {
+        
+    }
 }

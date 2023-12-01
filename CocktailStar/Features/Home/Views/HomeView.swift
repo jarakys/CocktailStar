@@ -12,28 +12,39 @@ struct HomeView: View {
     @StateObject public var viewModel: HomeViewModel
     
     var body: some View {
-        ZStack {
-            CompositionalList(viewModel.items) { model, indexPath in
-                switch model {
-                case let .offer(viewModel):
-                    OfferHomeCell(viewModel: viewModel)
-                    
-                case .favorite:
-                    EmptyView()
-                    
-                case let .category(viewModel):
-                    CategoryHomeCell(viewModel: viewModel)
+        NavigationStack {
+            ZStack {
+                VStack {
+                    SearchBarView(searchText: Binding<String>(projectedValue: .constant("")))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 16)
+                        .disabled(true)
+                        .onTapGesture {
+                            viewModel.searchDidTap()
+                        }
+                    CompositionalList(viewModel.items) { model, indexPath in
+                        switch model {
+                        case let .offer(viewModel):
+                            OfferHomeCell(viewModel: viewModel)
+                            
+                        case .favorite:
+                            EmptyView()
+                            
+                        case let .category(viewModel):
+                            CategoryHomeCell(viewModel: viewModel)
+                        }
+                    }.sectionHeader { sectionIdentifier, kind, indexPath in
+                        getView(for: sectionIdentifier.type)
+                    }
+                    .selectedItem { _ in
+                        
+                    }
+                    .customLayout(.composed(sections: viewModel.sections))
                 }
-            }.sectionHeader { sectionIdentifier, kind, indexPath in
-                getView(for: sectionIdentifier.type)
             }
-            .selectedItem { _ in
-                
-            }
-            .customLayout(.composed(sections: viewModel.sections))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.mainBackground)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.mainBackground)
     }
 }
 
