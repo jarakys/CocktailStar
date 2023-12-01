@@ -9,20 +9,20 @@ import SwiftUI
 import CompositionalList
 
 struct HomeView: View {
-    private var items: [GenericSectionIdentifierModel] = [
-        .init(sectionIdentifier: .init(type: .offers), cellIdentifiers: [BaseHomeItemViewModel(image: "cocktailPlaceholder", title: "Editor's choise"), BaseHomeItemViewModel(image: "cocktailPlaceholder", title: "Editor's choise")]),
-        .init(sectionIdentifier: .init(type: .favorites), cellIdentifiers: [BaseHomeItemViewModel(image: "cocktailPlaceholder", title: "Editor's choise"),
-                                                                            BaseHomeItemViewModel(image: "cocktailPlaceholder", title: "Editor's choise"),BaseHomeItemViewModel(image: "cocktailPlaceholder", title: "Editor's choise")])]
+    @StateObject public var viewModel: HomeViewModel
+    
     var body: some View {
         ZStack {
-            CompositionalList(items) { model, indexPath in
-                switch ScreenSections.allCases[indexPath.section] {
-                case .offers:
-                    OfferHomeCell()
-                case .favorites:
-                    OfferHomeCell()
-                default:
-                    Text("Hui")
+            CompositionalList(viewModel.items) { model, indexPath in
+                switch model {
+                case let .offer(viewModel):
+                    OfferHomeCell(viewModel: viewModel)
+                    
+                case .favorite:
+                    CategoryHomeCell(title: "Title")
+                    
+                case .category:
+                    CategoryHomeCell(title: "Title")
                 }
             }.sectionHeader { sectionIdentifier, kind, indexPath in
                 getView(for: sectionIdentifier.type)
@@ -30,7 +30,7 @@ struct HomeView: View {
             .selectedItem { _ in
                 
             }
-            .customLayout(.composed(sections: [.offers, .favorites, .proposals]))
+            .customLayout(.composed(sections: viewModel.sections))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.mainBackground)
@@ -52,5 +52,5 @@ extension HomeView {
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: HomeViewModel())
 }

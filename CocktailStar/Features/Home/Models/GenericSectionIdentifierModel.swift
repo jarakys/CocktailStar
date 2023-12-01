@@ -11,5 +11,5 @@ import CompositionalList
 public struct GenericSectionIdentifierModel: SectionIdentifierViewModel {
     public var sectionIdentifier: HomeItemSectionModel
     
-    public var cellIdentifiers: [BaseHomeItemViewModel]
+    public var cellIdentifiers: [HomeCell]
 }

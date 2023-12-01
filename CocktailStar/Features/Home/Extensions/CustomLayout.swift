@@ -16,8 +16,10 @@ public extension UICollectionViewLayout {
             switch section {
             case .offers:
                 return offerSection()
+                
             case .favorites:
                 return titledTopItemsSection()
+                
             default: return offerSection()
             }
         }
@@ -26,9 +28,9 @@ public extension UICollectionViewLayout {
     private static func offerSection() -> NSCollectionLayoutSection {
         let topNestedItemLeading = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
         topNestedItemLeading.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8)
-        let dailyMealGroup = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.9), heightDimension: .absolute(285)), subitems: [topNestedItemLeading])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalHeight(0.4)), subitems: [topNestedItemLeading])
 
-        let section = NSCollectionLayoutSection(group: dailyMealGroup)
+        let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
         section.orthogonalScrollingBehavior = .groupPaging
         return section
@@ -37,9 +39,9 @@ public extension UICollectionViewLayout {
     private static func titledTopItemsSection() -> NSCollectionLayoutSection {
         let topNestedItemLeading = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
         topNestedItemLeading.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8)
-        let dailyMealGroup = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.45), heightDimension: .absolute(150)), subitems: [topNestedItemLeading])
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.45), heightDimension: .absolute(150)), subitems: [topNestedItemLeading])
 
-        let section = NSCollectionLayoutSection(group: dailyMealGroup)
+        let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
         section.orthogonalScrollingBehavior = .continuous
         let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),

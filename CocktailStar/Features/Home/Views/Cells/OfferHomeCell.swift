@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct OfferHomeCell: View {
+    public let viewModel: OfferHomeItemViewModel
+    
     var body: some View {
         ZStack {
             BlurView(style: .regular)
@@ -23,13 +26,22 @@ struct OfferHomeCell: View {
                     )
                 }
             VStack(spacing: 8) {
-                Image(.cocktailPlaceholder)
+                KFImage(URL(string: viewModel.image))
+                    .placeholder({
+                        Image(.cocktailPlaceholder)
+                            .resizable()
+                    })
+                    .interpolation(.low)
+                    .backgroundDecode()
+                    .cacheOriginalImage(false)
+                    .cancelOnDisappear(true)
                     .resizable()
                 Text("Editor's Choice")
                     .foregroundStyle(Color.red)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 20)
             }
-            .padding(.all, 20)
+            .padding(.bottom, 20)
         }
         .overlay(
             RoundedRectangle(cornerRadius: 20)
@@ -40,5 +52,5 @@ struct OfferHomeCell: View {
 }
 
 #Preview {
-    OfferHomeCell()
+    OfferHomeCell(viewModel: OfferHomeItemViewModel(title: "Editor choise", image: "https://zira.uz/wp-content/uploads/2018/12/glintvey-bezalkogolniy-2.jpg"))
 }
