@@ -10,17 +10,19 @@ import Combine
 
 final class HomeViewModel: BaseViewModel {
     @Published public var items = [GenericSectionIdentifierModel]()
+    private let navigationSender: PassthroughSubject<HomeFlowEvent, Never>
+    
+    init(navigationSender: PassthroughSubject<HomeFlowEvent, Never>) {
+        self.navigationSender = navigationSender
+        items = Self.mockedItems
+        super.init()
+    }
     
     public var sections: [ScreenSections] {
         items.map({ $0.sectionIdentifier.type })
     }
     
-    override init() {
-        items = Self.mockedItems
-        super.init()
-    }
-    
     public func searchDidTap() {
-        
+        navigationSender.send(.search)
     }
 }

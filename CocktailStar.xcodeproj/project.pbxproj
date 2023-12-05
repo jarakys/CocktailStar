@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		1137D85A2B0E4D09001A48A1 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1137D8592B0E4D09001A48A1 /* NeedleGenerated.swift */; };
 		1137D85D2B0E50C1001A48A1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1137D85C2B0E50C1001A48A1 /* Kingfisher */; };
+		113C6BCD2B1F37BC009CAF42 /* NavigationTransitions in Frameworks */ = {isa = PBXBuildFile; productRef = 113C6BCC2B1F37BC009CAF42 /* NavigationTransitions */; };
+		113C6BCF2B1F385A009CAF42 /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C6BCE2B1F385A009CAF42 /* HomeCoordinatorView.swift */; };
+		113C6BD12B1F3864009CAF42 /* HomeCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C6BD02B1F3864009CAF42 /* HomeCoordinatorViewModel.swift */; };
+		113C6BD32B1F3A13009CAF42 /* HomeFlowEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C6BD22B1F3A13009CAF42 /* HomeFlowEvent.swift */; };
+		113C6BD52B1F3A1F009CAF42 /* HomeCommunicationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C6BD42B1F3A1F009CAF42 /* HomeCommunicationEvent.swift */; };
+		113C6BD72B1F449C009CAF42 /* HomeFlowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C6BD62B1F449C009CAF42 /* HomeFlowScreen.swift */; };
 		11630FB62B10B7750002D647 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 11630FB52B10B7750002D647 /* Apollo */; };
 		11630FB82B10B7750002D647 /* Apollo-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 11630FB72B10B7750002D647 /* Apollo-Dynamic */; };
 		11630FBA2B10B7750002D647 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 11630FB92B10B7750002D647 /* ApolloAPI */; };
@@ -55,6 +61,11 @@
 
 /* Begin PBXFileReference section */
 		1137D8592B0E4D09001A48A1 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		113C6BCE2B1F385A009CAF42 /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
+		113C6BD02B1F3864009CAF42 /* HomeCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		113C6BD22B1F3A13009CAF42 /* HomeFlowEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowEvent.swift; sourceTree = "<group>"; };
+		113C6BD42B1F3A1F009CAF42 /* HomeCommunicationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCommunicationEvent.swift; sourceTree = "<group>"; };
+		113C6BD62B1F449C009CAF42 /* HomeFlowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowScreen.swift; sourceTree = "<group>"; };
 		11630FC62B10BC5E0002D647 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		11630FCD2B10C60C0002D647 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		11630FD02B10DA1F0002D647 /* OfferHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferHomeCell.swift; sourceTree = "<group>"; };
@@ -102,6 +113,7 @@
 				11630FBC2B10B7750002D647 /* ApolloSQLite in Frameworks */,
 				1189A9882B14B85F0048E5D1 /* CompositionalList in Frameworks */,
 				11630FBA2B10B7750002D647 /* ApolloAPI in Frameworks */,
+				113C6BCD2B1F37BC009CAF42 /* NavigationTransitions in Frameworks */,
 				11630FB62B10B7750002D647 /* Apollo in Frameworks */,
 				11A7B8832B0E449D00AEB14D /* NeedleFoundation in Frameworks */,
 				1137D85D2B0E50C1001A48A1 /* Kingfisher in Frameworks */,
@@ -202,6 +214,9 @@
 				1189A98C2B14D16C0048E5D1 /* HomeItemSectionModel.swift */,
 				1189A98E2B14D1960048E5D1 /* GenericSectionIdentifierModel.swift */,
 				118FFFDB2B1A0E14009EF9B6 /* HomeCell.swift */,
+				113C6BD22B1F3A13009CAF42 /* HomeFlowEvent.swift */,
+				113C6BD42B1F3A1F009CAF42 /* HomeCommunicationEvent.swift */,
+				113C6BD62B1F449C009CAF42 /* HomeFlowScreen.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +228,7 @@
 				118FFFD22B19F954009EF9B6 /* HomeViewModel.swift */,
 				118FFFD92B1A0DF9009EF9B6 /* OfferHomeItemViewModel.swift */,
 				118FFFDD2B1A0FE6009EF9B6 /* CategoryHomeItemViewModel.swift */,
+				113C6BD02B1F3864009CAF42 /* HomeCoordinatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -232,6 +248,7 @@
 				1189A9902B14E1B20048E5D1 /* Headers */,
 				11630FCF2B10DA160002D647 /* Cells */,
 				11630FCD2B10C60C0002D647 /* HomeView.swift */,
+				113C6BCE2B1F385A009CAF42 /* HomeCoordinatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -469,6 +486,7 @@
 				11630FBF2B10B7750002D647 /* ApolloWebSocket */,
 				11630FC22B10BAAD0002D647 /* Lottie */,
 				1189A9872B14B85F0048E5D1 /* CompositionalList */,
+				113C6BCC2B1F37BC009CAF42 /* NavigationTransitions */,
 			);
 			productName = CocktailStar;
 			productReference = 11A7B8612B0E422D00AEB14D /* CocktailStar.app */;
@@ -504,6 +522,7 @@
 				11630FB42B10B7750002D647 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				11630FC12B10BAAD0002D647 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				1189A9862B14B85F0048E5D1 /* XCRemoteSwiftPackageReference "CompositionalList" */,
+				113C6BCB2B1F37BC009CAF42 /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */,
 			);
 			productRefGroup = 11A7B8622B0E422D00AEB14D /* Products */;
 			projectDirPath = "";
@@ -557,12 +576,16 @@
 			files = (
 				118FFFDE2B1A0FE6009EF9B6 /* CategoryHomeItemViewModel.swift in Sources */,
 				118FFFD32B19F954009EF9B6 /* HomeViewModel.swift in Sources */,
+				113C6BD12B1F3864009CAF42 /* HomeCoordinatorViewModel.swift in Sources */,
 				118FFFDC2B1A0E14009EF9B6 /* HomeCell.swift in Sources */,
 				11630FDE2B10E59A0002D647 /* CustomLayout.swift in Sources */,
+				113C6BCF2B1F385A009CAF42 /* HomeCoordinatorView.swift in Sources */,
 				1137D85A2B0E4D09001A48A1 /* NeedleGenerated.swift in Sources */,
 				118FFFD52B19F971009EF9B6 /* HomeViewModel+mockedItems.swift in Sources */,
+				113C6BD72B1F449C009CAF42 /* HomeFlowScreen.swift in Sources */,
 				118FFFE32B1A1817009EF9B6 /* SearchBarView.swift in Sources */,
 				1189A9952B14E23A0048E5D1 /* HomeExpandedHeaderView.swift in Sources */,
+				113C6BD32B1F3A13009CAF42 /* HomeFlowEvent.swift in Sources */,
 				11630FD42B10DA4D0002D647 /* BlurView.swift in Sources */,
 				118FFFF52B1A1EC2009EF9B6 /* SearchCell.swift in Sources */,
 				11630FD72B10DA790002D647 /* FollowFingerModifier.swift in Sources */,
@@ -570,6 +593,7 @@
 				1189A98B2B14D1430048E5D1 /* BaseHomeItemViewModel.swift in Sources */,
 				118FFFEF2B1A1DF6009EF9B6 /* SearchModel.swift in Sources */,
 				11630FD12B10DA1F0002D647 /* OfferHomeCell.swift in Sources */,
+				113C6BD52B1F3A1F009CAF42 /* HomeCommunicationEvent.swift in Sources */,
 				11630FE12B10E5E10002D647 /* ScreenSections.swift in Sources */,
 				1189A98D2B14D16C0048E5D1 /* HomeItemSectionModel.swift in Sources */,
 				118FFFE82B1A1C94009EF9B6 /* SearchView.swift in Sources */,
@@ -799,6 +823,14 @@
 				minimumVersion = 7.10.0;
 			};
 		};
+		113C6BCB2B1F37BC009CAF42 /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davdroman/swiftui-navigation-transitions.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.3;
+			};
+		};
 		11630FB42B10B7750002D647 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
@@ -838,6 +870,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1137D85B2B0E50C1001A48A1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		113C6BCC2B1F37BC009CAF42 /* NavigationTransitions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 113C6BCB2B1F37BC009CAF42 /* XCRemoteSwiftPackageReference "swiftui-navigation-transitions" */;
+			productName = NavigationTransitions;
 		};
 		11630FB52B10B7750002D647 /* Apollo */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -16,7 +16,7 @@ struct CocktailStarApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView(viewModel: HomeViewModel())
+            HomeCoordinatorView(viewModel: HomeCoordinatorViewModel())
         }
     }
 }

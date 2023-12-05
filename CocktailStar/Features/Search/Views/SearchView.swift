@@ -6,18 +6,19 @@
 //
 
 import SwiftUI
+import NavigationTransitions
 
 struct SearchView: View {
     @StateObject public var viewModel: SearchViewModel
     
     var body: some View {
         VStack {
-            NavigationStack
             SearchBarView(searchText: $viewModel.searchText)
             List(viewModel.items, id: \.id) { item in
                 SearchCell(viewModel: item)
             }
         }
+        .navigationTransition(.fade(.cross))
     }
 }
 
