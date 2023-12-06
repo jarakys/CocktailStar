@@ -6,8 +6,28 @@
 //
 
 import Foundation
+import Combine
 
-struct SearchModel {
+final class SearchModel {
     public let id: UUID
     public let text: String
+    public let isRemoveable: Bool
+    public let sender = PassthroughSubject<SearchModel.Event, Never>()
+    
+    init(id: UUID, text: String, isRemoveable: Bool) {
+        self.id = id
+        self.text = text
+        self.isRemoveable = isRemoveable
+    }
+    
+    public func removeDidTap() {
+        sender.send(.removeDidTap)
+    }
+}
+
+// MARK: Event
+extension SearchModel {
+    enum Event {
+        case removeDidTap
+    }
 }

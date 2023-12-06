@@ -10,15 +10,41 @@ import NavigationTransitions
 
 struct SearchView: View {
     @StateObject public var viewModel: SearchViewModel
+    @FocusState private var focused: Bool
     
     var body: some View {
         VStack {
             SearchBarView(searchText: $viewModel.searchText)
-            List(viewModel.items, id: \.id) { item in
-                SearchCell(viewModel: item)
+                .focused($focused)
+            List(viewModel.sections, id: \.id) { section in
+                Section {
+                    ForEach(section.items, id: \.id) { item in
+                        SearchCell(viewModel: item)
+                            .listRowBackground(Color.mainBackground)
+                    }
+                    if viewModel.sections.first?.type.title == section.type.title {
+                        Divider()
+                            .background(.white)
+                            .listRowBackground(Color.mainBackground)
+                    }
+                }
+            header: {
+                Text(section.type.title)
+                    .fontWeight(.bold)
+                    .font(.headline)
             }
+            .foregroundStyle(.white)
+            }
+            .scrollContentBackground(.hidden)
+            .listSectionSpacing(0)
+            .listStyle(.grouped)
         }
-        .navigationTransition(.fade(.cross))
+        
+        .padding(.horizontal, 16)
+        .background(.mainBackground)
+        .onAppear(perform: {
+            focused = true
+        })
     }
 }
 

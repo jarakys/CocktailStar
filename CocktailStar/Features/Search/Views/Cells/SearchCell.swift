@@ -6,15 +6,27 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SearchCell: View {
     public let viewModel: SearchModel
     var body: some View {
-        Text(viewModel.text)
-            .frame(maxWidth: .infinity, alignment: .center)
+        HStack {
+            Text(viewModel.text)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            if viewModel.isRemoveable {
+                Spacer()
+                Image(systemName: "xmark")
+                    .foregroundStyle(.white)
+                    .onTapGesture {
+                        viewModel.removeDidTap()
+                    }
+            }
+        }
+        
     }
 }
 
 #Preview {
-    SearchCell(viewModel: SearchModel(id: UUID(), text: ""))
+    SearchCell(viewModel: SearchModel(id: UUID(), text: "", isRemoveable: false))
 }
