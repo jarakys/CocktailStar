@@ -31,10 +31,6 @@ struct HomeCoordinatorView: View {
                     CatalogCoordinatorView()
                 }
             })
-            .if(viewModel.currentScreen == .search, transform: { view in
-                view
-                    .navigationTransition(.default)
-            })
             .onReceive(viewModel.navigationSender.delay(for: 0.1, scheduler: RunLoop.main), perform: { flow in
                 switch flow {
                 case .search:
