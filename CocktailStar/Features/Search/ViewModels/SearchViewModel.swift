@@ -19,7 +19,18 @@ final class SearchViewModel: BaseViewModel {
                     SearchSectionModel(type: .popular, items: Self.popularItems)]
         super.init()
         
-        // TODO load items from userDefaults
+        // TODO: load items from userDefaults
+    }
+    
+    public func search() {
+        guard !searchText.isEmpty,
+              !searchText.replacingOccurrences(of: " ", with: "").isEmpty else { return }
+        searchDidTap(searchText: searchText)
+    }
+    
+    public func searchDidTap(searchText: String) {
+        // TODO: Need make network request with items
+        // Or redirect to Catalog with loading state(it's better solution for UX) 
     }
     
     override func bind() {
@@ -34,7 +45,11 @@ final class SearchViewModel: BaseViewModel {
                guard let self else { return }
                guard event == .removeDidTap else { return }
                guard let searchModel else { return }
-               self.sections.first(where: { $0.type == .latest })?.items.removeAll(where: { $0.id == searchModel.id })
+               let section = self.sections.first(where: { $0.type == .latest })
+               section?.items.removeAll(where: { $0.id == searchModel.id })
+               if section?.items.count == 0 {
+                   self.sections.removeAll(where: { $0.id == section?.id })
+               }
                self.objectWillChange.send()
            }).store(in: &sectionsCancellable)
         })
