@@ -12,6 +12,7 @@ enum HomeFlowEvent: Hashable {
     case offer
     case plainCategories
     case list
+    case catalog(searchText: String)
     case item
     case back
 }

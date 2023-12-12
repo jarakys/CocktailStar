@@ -7,6 +7,7 @@
 
 import Foundation
 
+//TODO: Move to service
 extension SearchViewModel {
     static let mockedItems: [SearchModel] = [
         SearchModel(id: UUID(), text: "Ice cocktail", isRemoveable: true),

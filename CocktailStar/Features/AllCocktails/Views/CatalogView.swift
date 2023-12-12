@@ -16,8 +16,14 @@ struct CatalogView: View {
                 CatalogCell(viewModel: item)
                     .frame(maxWidth: .infinity)
                     .frame(height: 100)
+                    .listRowBackground(Color.mainBackground)
             }
+            .scrollContentBackground(.hidden)
+            .listStyle(.plain)
         }
+        .padding(.horizontal, 16)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.mainBackground)
     }
 }
 

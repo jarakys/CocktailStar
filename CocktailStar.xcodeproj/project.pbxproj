@@ -67,6 +67,9 @@
 		11EB6E1B2B27557B0097AA4D /* CatalogViewModel+mockedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E1A2B27557B0097AA4D /* CatalogViewModel+mockedItems.swift */; };
 		11EB6E1F2B28630A0097AA4D /* MainCoordinatorPathState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E1E2B28630A0097AA4D /* MainCoordinatorPathState.swift */; };
 		11EB6E222B2863310097AA4D /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E212B2863310097AA4D /* MainCoordinatorView.swift */; };
+		11EB6E262B286AFC0097AA4D /* CatalogCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E252B286AFC0097AA4D /* CatalogCoordinatorView.swift */; };
+		11EB6E2A2B2873670097AA4D /* CatalogItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E292B2873670097AA4D /* CatalogItemModel.swift */; };
+		11EB6E2C2B28736D0097AA4D /* CatalogFlowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E2B2B28736D0097AA4D /* CatalogFlowScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +122,9 @@
 		11EB6E1A2B27557B0097AA4D /* CatalogViewModel+mockedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CatalogViewModel+mockedItems.swift"; sourceTree = "<group>"; };
 		11EB6E1E2B28630A0097AA4D /* MainCoordinatorPathState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorPathState.swift; sourceTree = "<group>"; };
 		11EB6E212B2863310097AA4D /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
+		11EB6E252B286AFC0097AA4D /* CatalogCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCoordinatorView.swift; sourceTree = "<group>"; };
+		11EB6E292B2873670097AA4D /* CatalogItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogItemModel.swift; sourceTree = "<group>"; };
+		11EB6E2B2B28736D0097AA4D /* CatalogFlowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogFlowScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +192,7 @@
 		11630FCB2B10C1B60002D647 /* AllCocktails */ = {
 			isa = PBXGroup;
 			children = (
+				11EB6E282B2873670097AA4D /* Models */,
 				11EB6E192B2755630097AA4D /* Extensions */,
 				11EB6E162B2752980097AA4D /* Views */,
 				11EB6E112B2751F60097AA4D /* ViewModels */,
@@ -504,8 +511,9 @@
 		11EB6E162B2752980097AA4D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11EB6E242B286AE90097AA4D /* Cells */,
 				11EB6E142B2752940097AA4D /* CatalogView.swift */,
-				11EB6E172B2752A70097AA4D /* CatalogCell.swift */,
+				11EB6E252B286AFC0097AA4D /* CatalogCoordinatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -541,6 +549,23 @@
 				11EB6E212B2863310097AA4D /* MainCoordinatorView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		11EB6E242B286AE90097AA4D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				11EB6E172B2752A70097AA4D /* CatalogCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		11EB6E282B2873670097AA4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11EB6E292B2873670097AA4D /* CatalogItemModel.swift */,
+				11EB6E2B2B28736D0097AA4D /* CatalogFlowScreen.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,10 +686,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				118FFFDE2B1A0FE6009EF9B6 /* CategoryHomeItemViewModel.swift in Sources */,
+				11EB6E262B286AFC0097AA4D /* CatalogCoordinatorView.swift in Sources */,
 				118FFFD32B19F954009EF9B6 /* HomeViewModel.swift in Sources */,
 				113C6BD12B1F3864009CAF42 /* HomeCoordinatorViewModel.swift in Sources */,
+				11EB6E2C2B28736D0097AA4D /* CatalogFlowScreen.swift in Sources */,
 				11EB6E182B2752A70097AA4D /* CatalogCell.swift in Sources */,
 				11EB6E222B2863310097AA4D /* MainCoordinatorView.swift in Sources */,
+				11EB6E2A2B2873670097AA4D /* CatalogItemModel.swift in Sources */,
 				118FFFDC2B1A0E14009EF9B6 /* HomeCell.swift in Sources */,
 				11630FDE2B10E59A0002D647 /* CustomLayout.swift in Sources */,
 				113C6BCF2B1F385A009CAF42 /* HomeCoordinatorView.swift in Sources */,

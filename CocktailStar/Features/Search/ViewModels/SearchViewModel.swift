@@ -11,14 +11,13 @@ import Combine
 final class SearchViewModel: BaseViewModel {
     @Published public var searchText = ""
     @Published public var sections = [SearchSectionModel]()
-    
+    public let navigationSender = PassthroughSubject<Event, Never>()
     private var sectionsCancellable = Set<AnyCancellable>()
     
     override init() {
         sections = [SearchSectionModel(type: .latest, items: Self.mockedItems),
                     SearchSectionModel(type: .popular, items: Self.popularItems)]
         super.init()
-        
         // TODO: load items from userDefaults
     }
     
@@ -31,6 +30,7 @@ final class SearchViewModel: BaseViewModel {
     public func searchDidTap(searchText: String) {
         // TODO: Need make network request with items
         // Or redirect to Catalog with loading state(it's better solution for UX) 
+        navigationSender.send(Event.searchDone(searchText: searchText))
     }
     
     override func bind() {
@@ -58,5 +58,12 @@ final class SearchViewModel: BaseViewModel {
 //        $items.sink(receiveValue: { [weak self] items in
 //            guard let self else { return }
 //        }).store(in: &cancellable)
+    }
+}
+
+// MARK: Event
+extension SearchViewModel {
+    enum Event: Hashable {
+        case searchDone(searchText: String)
     }
 }

@@ -14,4 +14,5 @@ enum HomeFlowScreen: Hashable {
     case plainCategories
     case list
     case item
+    case catalogCoordinator(searchText: String)
 }

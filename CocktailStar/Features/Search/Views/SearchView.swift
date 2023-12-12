@@ -7,6 +7,7 @@
 
 import SwiftUI
 import NavigationTransitions
+import Combine
 
 struct SearchView: View {
     @StateObject public var viewModel: SearchViewModel
@@ -21,6 +22,9 @@ struct SearchView: View {
                     ForEach(section.items, id: \.id) { item in
                         SearchCell(viewModel: item)
                             .listRowBackground(Color.mainBackground)
+                            .onTapGesture {
+                                viewModel.searchDidTap(searchText: item.text)
+                            }
                     }
                     if viewModel.sections.first?.type.title == section.type.title {
                         Divider()

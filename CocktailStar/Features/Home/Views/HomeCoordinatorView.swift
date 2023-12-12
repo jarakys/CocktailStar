@@ -3,7 +3,6 @@ import NavigationTransitions
 
 struct HomeCoordinatorView: View {
     @StateObject public var viewModel: HomeCoordinatorViewModel
-    @State var paths = NavigationPath()
     @EnvironmentObject public var state: MainCoordinatorPathState
     
     var body: some View {
@@ -11,7 +10,7 @@ struct HomeCoordinatorView: View {
             .navigationDestination(for: HomeFlowScreen.self, destination: { flow in
                 switch flow {
                 case .search:
-                    SearchView(viewModel: SearchViewModel())
+                    SearchView(viewModel: viewModel.getSearchViewModel())
                     
                 case .item:
                     Text("Item")
@@ -27,6 +26,9 @@ struct HomeCoordinatorView: View {
                     
                 case .home:
                     HomeView(viewModel: HomeViewModel(navigationSender: viewModel.navigationSender))
+                    
+                case let .catalogCoordinator(searchText):
+                    CatalogCoordinatorView()
                 }
             })
             .if(viewModel.currentScreen == .search, transform: { view in
@@ -49,6 +51,9 @@ struct HomeCoordinatorView: View {
                     
                 case .item:
                     state.append(screen: HomeFlowScreen.item)
+                    
+                case let .catalog(searchText):
+                    state.append(screen: HomeFlowScreen.catalogCoordinator(searchText: searchText))
                     
                 case .back:
                     state.pop()

@@ -24,12 +24,14 @@ struct CatalogCell: View {
                 .cancelOnDisappear(true)
                 .resizable()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .blur(radius: 10)
+                .blur(radius: 3)
             VStack(spacing: 10) {
                 Text(viewModel.title)
                     .font(.largeTitle)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 Text(viewModel.shortDescription)
                     .font(.title3)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
             .foregroundStyle(.white)
         }

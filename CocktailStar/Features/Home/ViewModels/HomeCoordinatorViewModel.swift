@@ -18,6 +18,19 @@ final class HomeCoordinatorViewModel: BaseViewModel {
         super.init()
     }
     
+    //TODO: Move to Dependency?
+    //TODO: Consider refactoring
+    public func getSearchViewModel() -> SearchViewModel {
+        let viewModel = SearchViewModel()
+        viewModel.navigationSender.sink(receiveValue: { [weak self] event in
+            switch event {
+            case let .searchDone(searchText):
+                self?.navigationSender.send(.catalog(searchText: searchText))
+            }
+        }).store(in: &cancellable)
+        return viewModel
+    }
+    
     override func bind() {
         // For different animation of navigation transition
         navigationSender.sink(receiveValue: { [weak self] event in
@@ -38,8 +51,7 @@ final class HomeCoordinatorViewModel: BaseViewModel {
             case .item:
                 currentScreen = .item
                 
-            case .back: break
-                
+            case .catalog, .back: break
             }
         }).store(in: &cancellable)
         
