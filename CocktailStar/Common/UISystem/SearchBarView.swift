@@ -9,12 +9,16 @@ import SwiftUI
 
 struct SearchBarView: View {
     @Binding public var searchText: String
+    public var done: (() -> Void)?
     
     var body: some View {
         HStack {
                 Image(systemName: "magnifyingglass")
                 .foregroundColor(.white)
-                TextField("", text: $searchText)
+                TextField("", text: $searchText, onCommit: {
+                    done?()
+                })
+                    .submitLabel(.search)
                     .font(Font.system(size: 21))
                     .foregroundStyle(.white)
                     .placeholder(when: searchText.isEmpty, placeholder: {

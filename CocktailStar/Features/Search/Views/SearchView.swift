@@ -15,7 +15,7 @@ struct SearchView: View {
     
     var body: some View {
         VStack {
-            SearchBarView(searchText: $viewModel.searchText)
+            SearchBarView(searchText: $viewModel.searchText, done: viewModel.search)
                 .focused($focused)
             List(viewModel.sections, id: \.id) { section in
                 Section {
