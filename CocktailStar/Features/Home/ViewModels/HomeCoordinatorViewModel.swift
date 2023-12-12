@@ -11,10 +11,13 @@ import Combine
 final class HomeCoordinatorViewModel: BaseViewModel {
     // For different animation of navigation transition and for state
     @Published public var currentScreen = HomeFlowScreen.home
-    public let navigationSender = PassthroughSubject<HomeFlowEvent, Never>()
-    public let communicationEvent = PassthroughSubject<HomeCommunicationEvent, Never>()
+    public let navigationSender: PassthroughSubject<HomeFlowEvent, Never>
+    public let communicationEvent: PassthroughSubject<HomeCommunicationEvent, Never>
     
-    override init() {
+    init(navigationSender: PassthroughSubject<HomeFlowEvent, Never>,
+         communicationEvent: PassthroughSubject<HomeCommunicationEvent, Never>) {
+        self.navigationSender = navigationSender
+        self.communicationEvent = communicationEvent
         super.init()
     }
     

@@ -49,6 +49,7 @@ struct SearchView: View {
         .onAppear(perform: {
             focused = true
         })
+        .ignoresSafeArea(.keyboard)
     }
 }
 

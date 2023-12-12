@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct MainCoordinatorView: View {
-    @StateObject public var state = MainCoordinatorPathState()
+    @StateObject public var state: MainCoordinatorPathState
+    let homeCoordinatorComponentBuilder: HomeCoordinatorComponentBuilder
+    
     var body: some View {
         NavigationStack(path: $state.paths) {
-            HomeCoordinatorView(viewModel: HomeCoordinatorViewModel())
-                .environmentObject(state)
+            AnyView(homeCoordinatorComponentBuilder.view())
         }
     }
 }

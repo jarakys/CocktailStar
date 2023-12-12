@@ -10,13 +10,16 @@ import NeedleFoundation
 
 @main
 struct CocktailStarApp: App {
+    let rootComponent: RootComponent
+    
     init() {
         registerProviderFactories()
+        rootComponent = RootComponent()
     }
     
     var body: some Scene {
         WindowGroup {
-            MainCoordinatorView()
+            AnyView(rootComponent.view())
         }
     }
 }
