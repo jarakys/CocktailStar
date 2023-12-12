@@ -4,9 +4,10 @@ import NavigationTransitions
 struct HomeCoordinatorView: View {
     @StateObject public var viewModel: HomeCoordinatorViewModel
     @EnvironmentObject public var state: MainCoordinatorPathState
+    let homeBuilder: HomeBuilder
     
     var body: some View {
-        HomeView(viewModel: HomeViewModel(navigationSender: viewModel.navigationSender))
+        homeBuilder.view()
             .navigationDestination(for: HomeFlowScreen.self, destination: { flow in
                 switch flow {
                 case .search:
@@ -25,7 +26,7 @@ struct HomeCoordinatorView: View {
                     Text("Plain categories")
                     
                 case .home:
-                    HomeView(viewModel: HomeViewModel(navigationSender: viewModel.navigationSender))
+                    homeBuilder.view()
                     
                 case let .catalogCoordinator(searchText):
                     CatalogCoordinatorView()

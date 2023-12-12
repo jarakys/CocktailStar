@@ -25,7 +25,11 @@ final class HomeCoordinatorComponent: Component<HomeCoordinatorDependency>, Home
     }
     
     func view() -> any View {
-        HomeCoordinatorView(viewModel: self.viewModel)
+        HomeCoordinatorView(viewModel: self.viewModel, homeBuilder: homeBuilder())
             .environmentObject(self.pathsState)
+    }
+    
+    func homeBuilder() -> HomeBuilder {
+        HomeComponent(parent: self)
     }
 }

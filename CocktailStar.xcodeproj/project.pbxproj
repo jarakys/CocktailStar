@@ -74,6 +74,9 @@
 		11EB6E3A2B28B80F0097AA4D /* HomeCoordinatorComponentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E392B28B80F0097AA4D /* HomeCoordinatorComponentBuilder.swift */; };
 		11EB6E3D2B28B8290097AA4D /* HomeCoordinatorDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E3C2B28B8290097AA4D /* HomeCoordinatorDependency.swift */; };
 		11EB6E402B28B8490097AA4D /* RootComponentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E3F2B28B8490097AA4D /* RootComponentBuilder.swift */; };
+		11EB6E422B28B9D70097AA4D /* HomeDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E412B28B9D70097AA4D /* HomeDependency.swift */; };
+		11EB6E442B28B9F10097AA4D /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E432B28B9F10097AA4D /* HomeBuilder.swift */; };
+		11EB6E462B28BA010097AA4D /* HomeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB6E452B28BA010097AA4D /* HomeComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +136,9 @@
 		11EB6E392B28B80F0097AA4D /* HomeCoordinatorComponentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorComponentBuilder.swift; sourceTree = "<group>"; };
 		11EB6E3C2B28B8290097AA4D /* HomeCoordinatorDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorDependency.swift; sourceTree = "<group>"; };
 		11EB6E3F2B28B8490097AA4D /* RootComponentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponentBuilder.swift; sourceTree = "<group>"; };
+		11EB6E412B28B9D70097AA4D /* HomeDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependency.swift; sourceTree = "<group>"; };
+		11EB6E432B28B9F10097AA4D /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		11EB6E452B28BA010097AA4D /* HomeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,6 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				11EB6E362B28B7E40097AA4D /* HomeCoordinatorComponent.swift */,
+				11EB6E452B28BA010097AA4D /* HomeComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -600,6 +607,7 @@
 			isa = PBXGroup;
 			children = (
 				11EB6E392B28B80F0097AA4D /* HomeCoordinatorComponentBuilder.swift */,
+				11EB6E432B28B9F10097AA4D /* HomeBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -608,6 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				11EB6E3C2B28B8290097AA4D /* HomeCoordinatorDependency.swift */,
+				11EB6E412B28B9D70097AA4D /* HomeDependency.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -740,6 +749,7 @@
 				118FFFDE2B1A0FE6009EF9B6 /* CategoryHomeItemViewModel.swift in Sources */,
 				11EB6E262B286AFC0097AA4D /* CatalogCoordinatorView.swift in Sources */,
 				118FFFD32B19F954009EF9B6 /* HomeViewModel.swift in Sources */,
+				11EB6E422B28B9D70097AA4D /* HomeDependency.swift in Sources */,
 				113C6BD12B1F3864009CAF42 /* HomeCoordinatorViewModel.swift in Sources */,
 				11EB6E2C2B28736D0097AA4D /* CatalogFlowScreen.swift in Sources */,
 				11EB6E182B2752A70097AA4D /* CatalogCell.swift in Sources */,
@@ -764,9 +774,11 @@
 				118FFFF52B1A1EC2009EF9B6 /* SearchCell.swift in Sources */,
 				11630FD72B10DA790002D647 /* FollowFingerModifier.swift in Sources */,
 				118FFFD02B19F899009EF9B6 /* BaseViewModel.swift in Sources */,
+				11EB6E462B28BA010097AA4D /* HomeComponent.swift in Sources */,
 				113C6BD92B2089C1009CAF42 /* View+if.swift in Sources */,
 				11EB6E372B28B7E40097AA4D /* HomeCoordinatorComponent.swift in Sources */,
 				1189A98B2B14D1430048E5D1 /* BaseHomeItemViewModel.swift in Sources */,
+				11EB6E442B28B9F10097AA4D /* HomeBuilder.swift in Sources */,
 				118FFFEF2B1A1DF6009EF9B6 /* SearchModel.swift in Sources */,
 				11EB6E322B28B5EC0097AA4D /* NeedleGenerated.swift in Sources */,
 				11630FD12B10DA1F0002D647 /* OfferHomeCell.swift in Sources */,
